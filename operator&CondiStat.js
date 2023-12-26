@@ -8,6 +8,8 @@
 // Exponentiation "**"
 // Increment "++"
 // Decrement "--"
+
+
 let A = 7;
 let B = 3;
 let C = A - B;
@@ -30,3 +32,27 @@ console.log("A++ =", A++ );   //post increment
 console.log("B-- =", B-- );  // post decrement
 console.log("++A =", ++A );  // pre increment
 console.log("--B =", --B );  //pre decrement
+
+
+//==========================================================
+//aasignment operators
+
+// = ,+= ,-=, *=, %= , **=, /=,
+
+A += 1; // A = A + 1
+console.log(A); 
+
+A -= 1; // A = A - 1
+console.log(A);
+
+A *= 2; // A = A * 2
+console.log(A);
+
+A /= 2; // A = A / 2
+console.log(A);
+
+A %= 2; // A = A % 2
+console.log(A);
+
+A **= 2; // A = A ** 2
+console.log(A);
