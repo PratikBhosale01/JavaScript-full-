@@ -96,3 +96,49 @@ console. log("cond3 || cond4 = ",cond3 || cond4) ;
 let cond5 = a ===6;
 console. log("cond3 || cond5 = ",cond3 || cond5) ;
 
+
+console.log("cond2 =", cond2) ;
+console.log("!cond2 =", !cond2) ;
+
+//===============================================
+//===========conditional statements==============
+//===============================================
+
+
+// If statements
+
+if(condl && cond2){
+    console.log("both cond1 & cond2 are true") ;
+}
+
+
+// If Else statements
+
+if(A % 2 == 0){
+    console.log( "A =", A ,"A is even  number") ;
+}else{
+    console.log( "A =", A ,"A is odd  number") ;
+}
+
+
+// If Elseif  statements
+
+if(cond3 && cond5){
+    console.log("both cond3 & cond5 are true") ;
+}else if(cond3 || cond5){
+    console.log("one of cond3 & cond5 is true") ;
+}else{
+    console.log("both cond3 & cond5 are false") ;
+
+}
+
+//================ternary operator ===========================
+
+// condition ? true output : false output
+
+let age = 19;
+let canVote = (age>18)? "u can Vote" : "u cannot vote" ;
+console.log("age = " , age ,   canVote );
+ // note visit MDN DOc for more information.
+
+ 
