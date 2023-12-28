@@ -46,6 +46,27 @@ const product = {
 
 
 
-for( let Key in product ){
+for( let Key in product ){ 
     console.log(Key ," : " ,product[ Key ] );
 }
+
+
+//===================================================
+//===============String==============================
+
+//String is a sequence of characters used to represent text
+
+let str = "VAIBHAV"; //
+
+let lenght = str.length
+
+let char = str[0];
+
+console.log(char,lenght);
+
+//template literals 
+//helpful for adding variables to strings
+
+let templ =` my friends name is ${str} .`
+
+console.log(templ);
