@@ -65,8 +65,45 @@ let char = str[0];
 console.log(char,lenght);
 
 //template literals 
+//A way to have embedded expressions in strings
 //helpful for adding variables to strings
 
-let templ =` my friends name is ${str} .`
+let templ =` my friends name is ${str} .`  // ${...} is placeholder
+
+//String interpolation
+//To create strings by doing substitution of placeholders
 
 console.log(templ);
+
+
+//escape characters
+// "\n" = next line
+//"\t" =  for tab
+
+// Note length of escape characters count as 1 character 
+
+console.log("happy\nyear ending");
+console.log("happy\tyear ending");
+
+
+// String Methods 
+//string are immutable
+
+let nam = "  Amol Gujar  ";
+let frd = " is my frd ";
+let cap = nam.toUpperCase();
+let low = nam.toLowerCase();
+let tri = nam.trim(); // remove spaces of starting and ending 
+let sli = nam.slice(1,5);
+let concat = nam.concat(frd);
+let repl = nam.replace( "o","u");
+let charAt = nam.charAt(7);
+
+
+console.log(cap, low, tri);
+console.log(sli);
+console.log(concat);
+console.log(repl);
+console.log(charAt);
+
+ 
