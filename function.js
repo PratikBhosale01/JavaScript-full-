@@ -70,3 +70,40 @@ arrowadd(1, 2);
 
 
 // function become method when u attached it to a object
+
+
+//forEach Loop in Arrays
+// arr.forEach( callBackFunction )
+// CallbackFunction : Here, it is a function to execute for each element in the array
+// *A callback is a function passed as an argument to another function.
+
+
+let arr =[ "Pune" , "mumbai"  , "nagpur" ];
+arr.forEach( function printValue( val ,idx,arr) {  // u can pass value of array , index , and  whole array
+    console.log(val,idx,arr);
+});
+
+//foreach function is higher order function / method
+//higher order function are those functions that take function as parameter or return a function 
+
+
+//====================================
+//some more methods of array
+
+//map 
+//Creates a new array with the results of some operation. The value its callback returns are used to form new array
+
+
+//arr.map( callbackFnx( value, index, array ) )
+
+let numArray = [ 1, 2, 3, 4];
+
+numArray.map((value)=>{
+    console.log(value);  //using map function TO print the value
+});       
+
+let numArrayNew =numArray.map((value)=>{
+    return value**2 ;  //using map function TO create new array
+});        
+
+console.log(numArrayNew); //
