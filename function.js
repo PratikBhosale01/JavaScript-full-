@@ -90,7 +90,7 @@ arr.forEach( function printValue( val ,idx,arr) {  // u can pass value of array 
 //====================================
 //some more methods of array
 
-//map 
+//-----------map 
 //Creates a new array with the results of some operation. The value its callback returns are used to form new array
 
 
@@ -107,3 +107,38 @@ let numArrayNew =numArray.map((value)=>{
 });        
 
 console.log(numArrayNew); //
+
+//------------filter 
+
+
+//Creates a new array of elements that give true for a conditionlfilter.
+//Eg: all even elements
+
+
+let alleven = numArray.filter((value)=>{
+    return value % 2 === 0 ;
+});
+
+console.log(alleven);
+
+//--------------Reduce 
+
+
+//Performs some operations & reduces the array to a single value. It returns that single value.
+
+//Eg: add all elements
+
+let addAll = numArray.reduce((pre , curr)=>{
+    return pre + curr;
+})
+
+console.log(addAll);
+
+//Eg: max number of array
+
+let max = numArray.reduce((pre , curr)=>{
+    return pre > curr ? pre : curr;
+
+});
+
+console.log(max);
