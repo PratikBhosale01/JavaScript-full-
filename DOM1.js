@@ -53,3 +53,17 @@ console.dir(allEleClass);
 
 let allEle = document.querySelectorAll("p") //By tag
 console.dir(allEle);
+
+//----- Properties
+console.log("properties");
+// • tagName : returns tag for element nodes
+    
+    console.dir(firstEle.tagName);
+// • innerText : returns the text content of the element and all its children
+    console.dir(document.body.innerText);
+// • innerHTML : returns the plain text or HTML contents in the element
+    console.dir(document.body.innerHTML);
+    // document.body.innerHTML="<div>CHANGE</div>";
+// • textContent : returns textual content even for hidden elements
+console.log("you can"  );
+       console.dir(document.body.textContent);
