@@ -67,3 +67,24 @@ console.log("properties");
 // • textContent : returns textual content even for hidden elements
 console.log("you can"  );
        console.dir(document.body.textContent);
+
+ // ==========================================================================================
+//attribute In Dom
+
+// • getAttribute( attr)           //to get the attribute value
+// • setAttribute( attr, value )  //to set the attribute val th
+
+let heading = document.querySelector("H1");
+
+console.dir(heading.getAttribute("id"));
+
+console.dir(heading.setAttribute("id", "heading" ));
+
+
+//=========================================================================================
+//style in dom 
+
+
+//node.style
+
+heading.style.backgroundColor = "Red";
