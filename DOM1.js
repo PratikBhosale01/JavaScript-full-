@@ -88,3 +88,33 @@ console.dir(heading.setAttribute("id", "heading" ));
 //node.style
 
 heading.style.backgroundColor = "Red";
+//=====================================================================================
+// Insert Elements
+// step 1. => let el = document.createElement("div")
+let button = document.createElement("button");
+button.innerText = "Yes do It ";
+//  step 2. => 
+// • node-append( el ) lladds at the end of node (inside)
+let div = document.querySelector("div");
+
+div.append(button);
+
+// • node.prepend( el ) lladds at the start of node (inside)
+
+// div.prepend(button);
+
+// • node.before( el ) lladds before the node (outside)
+
+// div.before(button);
+
+// • node.after( el ) lladds after the node (outside)
+
+// div.after(button);
+
+// =============================================================================================
+ //rremove
+let parag =document.querySelector("p");
+parag.remove();
+
+
+// learn about appendchild and removechild
