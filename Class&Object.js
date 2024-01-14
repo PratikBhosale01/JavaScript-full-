@@ -75,3 +75,64 @@ console.log(lexus);
 
 lexus.brand = "lexus";
 console.log(lexus);
+
+// inheritance in js 
+//inheritance is passing down properties & methods from parent class to child class.
+//*If Child & Parent have same method, child's method will be used. [Method Overriding]
+
+// class Person{
+//     eat (){
+//         console.log("eat");
+
+//     }
+
+//     sleep(){
+//         console.log("sleep"); 
+
+//     }
+// }
+
+
+// class Engineer extends Person{
+//     work (){
+//         console.log("slove problem , build something ");
+
+//     }
+// }
+
+// let SuyogObj = new Engineer();
+// console.log("suyog build something");
+// console.log(SuyogObj.eat());
+
+
+// super Keyword 
+//The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
+class Person{
+
+    constructor(){
+        console.log("Entre parent Contrusctor");
+        this.species = "Homo sapiens"
+    }
+    eat (){
+        console.log("eat");
+
+    }
+
+}
+
+
+class Engineer extends Person{
+    constructor(branch) {
+        console.log("Entre child Contrusctor");
+        super(); // to invoke parent constructor
+        this.branch = branch;
+    }
+    
+    
+    work (){
+        console.log("slove problem , build something ");
+
+    }
+}
+
+let SuyogObj = new Engineer("civil");
