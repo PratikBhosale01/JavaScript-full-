@@ -34,3 +34,44 @@ const karan = {
 karan.__proto__ = employee;
 
 karan.calTax();
+
+//====================================
+//classes
+//Class is a program-code template for creating objects.
+//Those objects will have some state (variables) & some behaviour (functions) inside it.
+
+//constructor in class 
+
+//automatically invoked by new keyword
+
+//used to initialize object
+
+class Toyata{
+
+    constructor(brand){
+        console.log("creating object ");
+        this.brand = brand;
+    }
+    start(){
+        console.log("Starting");
+
+    }
+
+    stop() {    
+        console.log("Stopping");
+    }
+
+    // setBrand (brand){
+    //     this.brand = brand;
+    // }
+}
+
+let fortuner = new Toyata("fortuner");
+
+ console.log(fortuner);
+// fortuner.setBrand(fortuner);
+let lexus = new Toyata();   // if you don't pass any value it will be undefined
+console.log(lexus);
+
+lexus.brand = "lexus";
+console.log(lexus);
