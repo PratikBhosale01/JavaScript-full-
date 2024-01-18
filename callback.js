@@ -44,14 +44,14 @@ calculator( 1 , 2 ,sum); // callback function pass with only name without perent
 // (Pyramid of Doom)
 // This style of programming becomes difficult to understand & manage.
 
-function getData(dataId,getNextData  ){
-   setTimeout(()=>{
-    console.log("data", dataId);
-    if(getNextData){
-    getNextData();
-  }
-   },2000);
-}
+// function getData(dataId,getNextData  ){
+//    setTimeout(()=>{
+//     console.log("data", dataId);
+//     if(getNextData){
+//     getNextData();
+//   }
+//    },2000);
+// }
 // callback Hell 
 getData(1,  ()=>{
   getData(2, ()=>{
@@ -67,3 +67,87 @@ getData(1,  ()=>{
 // It is a solution to callback hell.
 // promise state are pending , fulfilled [resolve], rejected
 //*resolve & reject are callbacks provided by JS
+//A JavaScript Promise object can be;
+
+// > Pending : the result is undefined
+// >Resolved the result is a value (fulfilled)           
+// >Rejected ; the result is an error object
+// resolve( result )
+// reject( error )
+
+//*Promise has state (pending, fulfilled) & some
+// result (result for resolve & error for reject).
+
+
+function getData(dataId,getNextData  ){
+ return new Promise((resolve, reject) =>{
+  setTimeout(()=>{
+   console.log("data", dataId);
+   resolve("success");
+   if(getNextData){
+   getNextData();
+ }
+  },2000);
+});
+}
+
+//.then( )&.catch()
+
+// promise.then( ( res ) => {})
+// promise.catch( ( err ) => {})
+
+const getpromise =( )=>{
+  return new Promise((resolve, reject) =>{
+    console.log("I m promise");
+    resolve("success");
+  })
+}
+
+
+let promise = getpromise();
+
+promise.then(()=>{
+  console.log(" promise fulfilled"); 
+});
+
+// promise chain 
+
+function asyncFunc1(){
+  return new Promise((resolve, reject) =>{
+setTimeout(()=>{
+  console.log("data1");
+  resolve("success");
+},4000);
+  });
+}
+
+
+function asyncFunc2(){
+  return new Promise((resolve, reject) =>{
+setTimeout(()=>{
+  console.log("data2");
+  resolve("success");
+},4000);
+  });
+}
+
+// console.log(" fetching data1...");
+// let data1 = asyncFunc1();
+// data1.then((res)=>{
+// console.log(res);
+// console.log(" fetching data2...");
+// let data2 = asyncFunc2();
+// data2.then ((res)=>{
+//   console.log(res);
+// });
+// })
+
+//simplest way to above code 
+console.log(" fetching data1...");
+asyncFunc1().then((res)=>{
+console.log(res);
+console.log(" fetching data2...");
+ asyncFunc2().then ((res)=>{
+  console.log(res);
+});
+})
