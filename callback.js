@@ -53,13 +53,13 @@ calculator( 1 , 2 ,sum); // callback function pass with only name without perent
 //    },2000);
 // }
 // callback Hell 
-getData(1,  ()=>{
-  getData(2, ()=>{
-    getData(3, ()=>{
-      getData(4);
-    });
-  });
-});
+// getData(1,  ()=>{
+//   getData(2, ()=>{
+//     getData(3, ()=>{
+//       getData(4);
+//     });
+//   });
+// });
 
 
 //Promises
@@ -96,19 +96,19 @@ function getData(dataId,getNextData  ){
 // promise.then( ( res ) => {})
 // promise.catch( ( err ) => {})
 
-const getpromise =( )=>{
-  return new Promise((resolve, reject) =>{
-    console.log("I m promise");
-    resolve("success");
-  })
-}
+// const getpromise =( )=>{
+//   return new Promise((resolve, reject) =>{
+//     console.log("I m promise");
+//     resolve("success");
+//   })
+// }
 
 
-let promise = getpromise();
+// let promise = getpromise();
 
-promise.then(()=>{
-  console.log(" promise fulfilled"); 
-});
+// promise.then(()=>{
+//   console.log(" promise fulfilled"); 
+// });
 
 // promise chain 
 
@@ -143,11 +143,19 @@ setTimeout(()=>{
 // })
 
 //simplest way to above code 
-console.log(" fetching data1...");
-asyncFunc1().then((res)=>{
-console.log(res);
-console.log(" fetching data2...");
- asyncFunc2().then ((res)=>{
-  console.log(res);
+// console.log(" fetching data1...");
+// asyncFunc1().then((res)=>{
+// console.log(res);
+// console.log(" fetching data2...");
+//  asyncFunc2().then ((res)=>{
+//   console.log(res);
+// });
+// })
+
+
+// actual way promise chain  (line num 82)
+getData(1).then((res)=>{
+  return getData(2)
+}).then((res)=>{
+  console.log("success");
 });
-})
